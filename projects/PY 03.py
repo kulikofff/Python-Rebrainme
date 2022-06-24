@@ -38,5 +38,12 @@ dictnew = dict(zip(keys, listnew))
 oldnew = [lineselect, dictnew]
 print(f"Создание списка словарей (объединение): {oldnew}")
 
-#6 Вывод одинаковых значений:
-print(f"Совпадение: {dict(set(dictnew.items()) & set(lineselect.items()))}")
+
+#6.1 Вывод одинаковых значений:
+
+lineselect1 = set(lineselect.values())
+dictnew1 = set(dictnew.values())
+print(f"Совпадение значения:  {lineselect1 & dictnew1}")
+
+#6.2 Вывод одинаковых значений (предыдущий вариант):
+print(f"Совпадение ключ-значение: {dict(set(dictnew.items()) & set(lineselect.items()))}")
