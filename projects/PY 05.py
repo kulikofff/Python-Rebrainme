@@ -14,16 +14,12 @@ list = ['May 18 11:59:18 PC-00102 plasmashell[1312]: kf.plasma.core: findInCache
 'May 24 19:26:40 PC-00102 rtkit-daemon[1131]: Supervising 5 threads of 2 processes of 1 users.']
 
 #2. Создание списка словарей:
-def log(i):
-    list_split = list[int(i)].split()
-    dict = {'time': " ".join(list_split[:3]), 'pc_name': list_split[3], 'service_name': (list_split[4])[:-1], 'message': " ".join(list_split[5:])}
-    return dict
 
 lineselect: list = []
-i = 0
 for num in list:  
-    lineselect.append(log(i))
-    i = i + 1
+    list_split = num.split()
+    dict1 = {'time': " ".join(list_split[:3]), 'pc_name': list_split[3], 'service_name': (list_split[4])[:-1], 'message': " ".join(list_split[5:])}
+    lineselect.append(dict1)
 print(lineselect)
 print()
 
@@ -47,14 +43,13 @@ print()
 
 #5 Выведите список значений поля 'message' для всех логов, которые записал ПК с именем 'PC0078':
 
-logs: list = []
 logs = [i['message'] for i in lineselect2 if i['pc_name'] == 'PC0078']
 print(logs)
 print()
 
 #6. Превратите список словарей логов (который вы сделали в задании 2) в словарь.
 #   Ключами в нем будут целые числа от 100 до 110, а значениями - словари логов.
-vocab = {}
+
 vocab = (dict(enumerate(lineselect, start=100)))
 
 #7 Выведите на экран словарь лога под ключом 104.
