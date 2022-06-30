@@ -1,3 +1,4 @@
+
 list = ['May 18 11:59:18 PC-00102 plasmashell[1312]: kf.plasma.core: findInCache with a lastModified timestamp of 0 is deprecated',
 'May 18 13:06:54 ideapad kwin_x11[1273]: Qt Quick Layouts: Detected recursive rearrange. Aborting after two iterations.',
 'May 20 09:16:28 PC0078 systemd[1]: Starting PackageKit Daemon...',
@@ -26,7 +27,7 @@ list2 = []
 listthree = []
 
 k: names = len(list) - 1
-n = int(input(f'Сколько будет строк логов? '))
+n = int(input(f'Сколько будет строк новых логов? '))
 num: names = 0
 
 while num < n: 
@@ -63,9 +64,10 @@ print()
 
 # Вывод полного списка: и старого лога/словаря, и нового:
 
-def log(i):
-    list_split = list2[int(i)].split()
-    print({'time': " ".join(list_split[:3]), 'pc_name': list_split[3], 'service_name': (list_split[4])[:-1], 'message': " ".join(list_split[5:])})
+def log(*args):
+    for key in args:
+        list_split = list2[int(key)].split()
+        print({'time': " ".join(list_split[:3]), 'pc_name': list_split[3], 'service_name': (list_split[4])[:-1], 'message': " ".join(list_split[5:])})
 
 
 print('Вывод и старого, и нового лога:')
@@ -81,12 +83,62 @@ print()
 print(log(i))
 print()
 
-#Создайте пустой список и добавьте в него 1ю, 2ю и 4ю запись из списка логов с помощью одного вызова вашей функции.
+#3. Создайте пустой список и добавьте в него 1ю, 2ю и 4ю запись из списка логов с помощью одного вызова вашей функции.
 #  Выведите полученный список на экран
 
 print("1ая, 2ая и 4ая запись из списка логов:")
 
-listthree = (log(0), log(1), log(3))
+listthree = log(0,1,3)
 print(listthree)
 print()
 
+
+#4. Скопируйте к себе этот модифицированный список из 4го урока, отображающий количество общей и занятой памяти на накопителях:
+
+storages: list = [
+    {'id': 382, 'total': 999641890816, 'used': 228013805568},
+    {'id': 385, 'total': 61686008768, 'used': 52522710872},
+    {'id': 398, 'total': 149023482194, 'used': 83612310700},
+    {'id': 400, 'total': 498830397039, 'used': 459995976927},
+    {'id': 401, 'total': 93386008768, 'used': 65371350065},
+    {'id': 402, 'total': 988242468378, 'used': 892424683789},
+    {'id': 430, 'total': 49705846287, 'used': 9522710872},
+]
+
+#5 Напишите функцию, которая:
+#5.1. Получает этот список
+
+def func_storages():
+    return storages
+
+print('Вывод исходного списка:')
+
+print(func_storages())
+print()
+
+#5.2., 5.3 Анализ состояния памяти каждого накопителя по алгоритму из задания для 4го урока. 
+# Формирует словарь, ключами которого являются: 'memory_ok', 'memory_not_enough' и 'memory_critical', а значениями - списки id накопителей,
+# состояние которых относится к соответствующему ключу.
+
+def analyze(args: list):
+
+    for values in args:
+        spacefree: int = values['total'] - values['used']
+        spacefree_perc: float = spacefree*100/values['total']
+        spacefree_gb: float = spacefree / 1024 ** 3
+
+        if spacefree_perc <= 5 or spacefree_gb <= 10:
+            status = 'memory_critical'
+        elif spacefree_perc <= 10 or spacefree_gb <= 30:
+            status = 'memory_not_enough'
+        else:
+            status = 'memory_ok'
+        yield {"id": values['id'], "status_memory": status}
+
+# Вывод словаря, полученного в результате работы, на экран.
+[a.update(b) for a, b in zip(storages, analyze(storages))]
+
+print('Вывод полного словаря:')
+
+for storage in storages:
+    print(storage)
