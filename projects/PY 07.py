@@ -95,7 +95,7 @@ print()
 
 #4. Скопируйте к себе этот модифицированный список из 4го урока, отображающий количество общей и занятой памяти на накопителях:
 
-storages: list = [
+disks: list = [
     {'id': 382, 'total': 999641890816, 'used': 228013805568},
     {'id': 385, 'total': 61686008768, 'used': 52522710872},
     {'id': 398, 'total': 149023482194, 'used': 83612310700},
@@ -109,7 +109,7 @@ storages: list = [
 #5.1. Получает этот список
 
 def func_storages():
-    return storages
+    return disks
 
 print('Вывод исходного списка:')
 
@@ -118,27 +118,37 @@ print()
 
 #5.2., 5.3 Анализ состояния памяти каждого накопителя по алгоритму из задания для 4го урока. 
 # Формирует словарь, ключами которого являются: 'memory_ok', 'memory_not_enough' и 'memory_critical', а значениями - списки id накопителей,
-# состояние которых относится к соответствующему ключу.
+# состояние которых относится к соответствующему ключу. 5.4. Возвращает сформированный словарь.
 
-def analyze(args: list):
+def storage_analyzer(disk_list: list) -> dict:
+    disks_dictionary = dict()
 
-    for values in args:
-        spacefree: int = values['total'] - values['used']
-        spacefree_perc: float = spacefree*100/values['total']
-        spacefree_gb: float = spacefree / 1024 ** 3
+    memory_ok: list = []
+    memory_not_enough: list = []
+    memory_critical: list = []
 
-        if spacefree_perc <= 5 or spacefree_gb <= 10:
-            status = 'memory_critical'
-        elif spacefree_perc <= 10 or spacefree_gb <= 30:
-            status = 'memory_not_enough'
+    for i in disk_list:
+        free_space: int = i['total'] - i['used']
+        free_space_percent: float = free_space*100/i['total']
+        free_space_in_gb: float = free_space / 1024 ** 3
+
+        if free_space_percent <= 5 or free_space_in_gb <= 10:
+            memory_critical.append(i['id'])
+        elif free_space_percent <= 10 or free_space_in_gb <= 30:
+            memory_not_enough.append(i['id'])
         else:
-            status = 'memory_ok'
-        yield {"id": values['id'], "status_memory": status}
+            memory_ok.append(i['id'])
 
-# Вывод словаря, полученного в результате работы, на экран.
-[a.update(b) for a, b in zip(storages, analyze(storages))]
+    disks_dictionary['memory_critical'] = memory_critical
+    disks_dictionary['memory_not_enough'] = memory_not_enough
+    disks_dictionary['memory_ok'] = memory_ok
 
-print('Вывод полного словаря:')
+    return disks_dictionary
 
-for storage in storages:
-    print(storage)
+
+#6. Примените эту функцию к вашему списку и выведите словарь, полученный в результате ее работы, на экран.
+
+print('Вывод словаря:')
+
+print(storage_analyzer(disks))
+
