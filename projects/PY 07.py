@@ -20,14 +20,15 @@ class names:
     z: int
     k: int
 
-k: names = len(list) - 1
-
-n = int(input(f'Сколько будет строк логов? '))
-
-num: names = 0 
 newlist = []
 enter = []
-l = []
+list2 = []
+listthree = []
+
+k: names = len(list) - 1
+n = int(input(f'Сколько будет строк логов? '))
+num: names = 0
+
 while num < n: 
     num = num + 1
     enter = input(f'Введите строку № {num} лога, без кавычек (пример -  May 20 11:01:12 PC-00102 PackageKit: daemon start  ): ')
@@ -37,9 +38,8 @@ def func(l, *args):
     l.extend(*args) 
     return(l)
 
-list = (func(list, newlist))
-  
-
+list2 = (func(list, newlist))
+ 
 # 2.2. Превращает вводимые вами строки логов в словари по тому же принципу, что и в пункте 2 задания для 3го урока.
 
 # Вывод только нового лога/словаря:
@@ -47,7 +47,7 @@ list = (func(list, newlist))
 print('Вывод только нового лога:')
 
 i: names = 0
-def lognew(i):
+def lognew(i, *args):
     list_split = newlist[int(i)].split()
     dict = {'time': " ".join(list_split[:3]), 'pc_name': list_split[3], 'service_name': (list_split[4])[:-1], 'message': " ".join(list_split[5:])}
     return dict
@@ -55,16 +55,16 @@ def lognew(i):
 while i < n:
     lognew(i)
     print(lognew(i))
-    i = i + 1
+    i += 1
 
-
+print()
 #2.3. Модифицирует входной список (переданный в качестве первого аргумента), добавляя в него все созданные словари. 
 #  Возвращать функция, соответственно, должна None
 
 # Вывод полного списка: и старого лога/словаря, и нового:
 
 def log(i):
-    list_split = list[int(i)].split()
+    list_split = list2[int(i)].split()
     print({'time': " ".join(list_split[:3]), 'pc_name': list_split[3], 'service_name': (list_split[4])[:-1], 'message': " ".join(list_split[5:])})
 
 
@@ -73,7 +73,20 @@ z: names = k + n
 i: names = 0
 while i < z:
     log(i)
-    i = i + 1
+    i += 1
+
+print()
 
 # Возвращение функции None
 print(log(i))
+print()
+
+#Создайте пустой список и добавьте в него 1ю, 2ю и 4ю запись из списка логов с помощью одного вызова вашей функции.
+#  Выведите полученный список на экран
+
+print("1ая, 2ая и 4ая запись из списка логов:")
+
+listthree = (log(0), log(1), log(3))
+print(listthree)
+print()
+
