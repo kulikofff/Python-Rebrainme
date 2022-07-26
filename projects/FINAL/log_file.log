@@ -1,15 +1,24 @@
-Jul 21 16:25:47 INFO The programme is started.
-Jul 21 16:25:47 INFO Getting information about external IP address...
-Jul 21 16:25:47 INFO Checking the existence of server in the list...
-Jul 21 16:25:51 ERROR DRW isn't accessible: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/servers/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D97258B070>: Failed to establish a new connection: [WinError 10061] РџРѕРґРєР»СЋС‡РµРЅРёРµ РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅРѕ, С‚.Рє. РєРѕРЅРµС‡РЅС‹Р№ РєРѕРјРїСЊСЋС‚РµСЂ РѕС‚РІРµСЂРі Р·Р°РїСЂРѕСЃ РЅР° РїРѕРґРєР»СЋС‡РµРЅРёРµ'))
-Jul 21 16:25:51 INFO Host not in the list. Adding into it ...
-Jul 21 16:25:51 INFO Dumping data into the server {'address': 'localhost', 'port': 8000}
-Jul 21 16:25:55 ERROR Cannot dump data into the server {'address': 'localhost', 'port': 8000}: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/servers/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D97258A260>: Failed to establish a new connection: [WinError 10061] РџРѕРґРєР»СЋС‡РµРЅРёРµ РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅРѕ, С‚.Рє. РєРѕРЅРµС‡РЅС‹Р№ РєРѕРјРїСЊСЋС‚РµСЂ РѕС‚РІРµСЂРі Р·Р°РїСЂРѕСЃ РЅР° РїРѕРґРєР»СЋС‡РµРЅРёРµ'))
-Jul 21 16:25:55 INFO Getting information about host ...
-Jul 21 16:25:55 INFO Getting information about average loading ...
-Jul 21 16:25:55 INFO Getting memory information ...
-Jul 21 16:25:55 INFO Getting information about network configuration ...
-Jul 21 16:25:55 INFO Getting disks information ...
-Jul 21 16:25:55 INFO Getting information about CPU ...
-Jul 21 16:25:55 INFO Dumping data into the server {'address': 'localhost', 'port': 8000}
-Jul 21 16:25:59 ERROR Cannot dump data into the server {'address': 'localhost', 'port': 8000}: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/perfmon/add/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9726101C0>: Failed to establish a new connection: [WinError 10061] РџРѕРґРєР»СЋС‡РµРЅРёРµ РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅРѕ, С‚.Рє. РєРѕРЅРµС‡РЅС‹Р№ РєРѕРјРїСЊСЋС‚РµСЂ РѕС‚РІРµСЂРі Р·Р°РїСЂРѕСЃ РЅР° РїРѕРґРєР»СЋС‡РµРЅРёРµ'))
+Jul 26 14:14:18 INFO Старт программы
+Jul 26 14:14:18 INFO Получен массив данных о системе
+Jul 26 14:14:18 INFO Успешная регистрация сервера и отправка данных
+Jul 26 14:15:18 INFO Старт программы
+Jul 26 14:15:18 INFO Получен массив данных о системе
+Jul 26 14:15:18 INFO Успешная регистрация сервера и отправка данных
+Jul 26 14:16:18 INFO Старт программы
+Jul 26 14:16:19 INFO Получен массив данных о системе
+Jul 26 14:16:19 INFO Успешная регистрация сервера и отправка данных
+Jul 26 14:17:19 INFO Старт программы
+Jul 26 14:17:19 INFO Получен массив данных о системе
+Jul 26 14:17:19 INFO Успешная регистрация сервера и отправка данных
+Jul 26 14:18:19 INFO Старт программы
+Jul 26 14:18:19 INFO Получен массив данных о системе
+Jul 26 14:18:19 INFO Успешная регистрация сервера и отправка данных
+Jul 26 14:19:19 INFO Старт программы
+Jul 26 14:19:19 INFO Получен массив данных о системе
+Jul 26 14:19:20 INFO Успешная регистрация сервера и отправка данных
+Jul 26 14:20:20 INFO Старт программы
+Jul 26 14:20:20 INFO Получен массив данных о системе
+Jul 26 14:20:20 INFO Успешная регистрация сервера и отправка данных
+Jul 26 14:29:39 INFO Старт программы
+Jul 26 14:29:39 INFO Получен массив данных о системе
+Jul 26 14:29:39 INFO Успешная регистрация сервера и отправка данных

@@ -2,6 +2,7 @@ import os
 import psutil
 import time
 import json
+import logging
 from os import environ, getlogin
 from psutil import virtual_memory, getloadavg
 import requests as requests
@@ -10,7 +11,10 @@ import jsonpickle
 #Задержка
 t = 60
 
-loadavg = getloadavg()
+#Установка параметров логирования
+
+logging.basicConfig(filename='log_file.log', format='%(asctime)s %(levelname)s %(message)s', datefmt='%b %d %H:%M:%S', level=logging.INFO)
+logging.basicConfig(filename='log_file.log', format='%(asctime)s %(levelname)s %(message)s', datefmt='%b %d %H:%M:%S', level=logging.ERROR)
 
 def datainfo():  
     class HOSTINFO:
@@ -22,14 +26,15 @@ def datainfo():
             return self.host_name
         
     class NETWORK:
-#        def get_status(status: bool):
-#            return "Up" if status else "Down"
+        @staticmethod
+        def get_stat(status: bool):
+            return "Up" if status else "Down"
 
         def show_stat(self):
             net_stat = psutil.net_if_stats()
             net = []
             for key, value in net_stat.items():
-                net.append({'interface': value.isup})
+                net.append({'interface': self.get_stat(value.isup)})
             out = net[0]
             return out
 
@@ -124,32 +129,42 @@ def datainfo():
     info_cpu = CPU()
     info_load = LOADAVG() 
     host_dict = {'sysname': info_host.show_sysname(), 'hostname': info_host.show_hostname()}
-    net_dict = [info_net.show_stat(), info_net.show_mtu()]
-    disk_dict = [info_disk.show_disk_name(), info_disk.show_mount_point(), info_disk.show_file_system_type(),info_disk.show_total(),info_disk.show_used()]
+    net_dict = [{**info_net.show_stat(), **info_net.show_mtu()}]
+    disk_dict = [{**info_disk.show_disk_name(), **info_disk.show_mount_point(), **info_disk.show_file_system_type(), **info_disk.show_total(), **info_disk.show_used()}]
     mem_dict = {'memory_total': info_mem.show_total(), 'memory_used': info_mem.show_used(), 'memory_percent': info_mem.show_per()} 
     cpu_dict = {'cpu_cores': info_cpu.show_cpu(), 'cpu_physical_cores': info_cpu.show_cores(), 'cpu_freqency': {info_cpu.show_freq()}}
     dict ={'host_information' : host_dict, 'network': net_dict, 'disk': disk_dict, 'memory': mem_dict, 'cpu': cpu_dict, 'load_average': info_load.info_load()}
-    
+
     return dict
 
-
-def django(dataresult):
-    ipaddress = requests.get('https://ifconfig.me/ip').text
-#"DESC" в windows нет:(
+def fordjango_descr():
+    #"DESC" в windows нет.
     try:
         description = (os.environ["DESC"])
     except(KeyError):
         description = input(f"Вероятно, у Вас установлено Windows, введите описание вручную: ")
+    return description
 
-#"hostname" в windows нет:(
+def fordjango_name():
+#"hostname" в windows нет.
     try:
         name = (os.environ["hostname"])
     except(KeyError):
         name = input(f"Вероятно, у Вас установлено Windows, введите имя сервера вручную: ")
+    return name
+
+description = fordjango_descr()
+name = fordjango_name()
+
+def django(dataresult):
+    ipaddress = requests.get('https://ifconfig.me/ip').text
     status = True
 
 # Устранение ошибки "TypeError: Object of type set is not JSON serializable"
     data_active = jsonpickle.encode(dataresult)
+# Для вывода ошибки при отправке данных в Django
+#    data_active = (dataresult)     
+
 
     data = {'name': name,
             'ip_address': ipaddress,
@@ -157,21 +172,34 @@ def django(dataresult):
             'server_is_active': status,
             'data_active': data_active}
     headers = {'Content-type': 'application/json'}
+    try:
+        response = requests.post('http://127.0.0.1:8000/api/servers/add', data=json.dumps(data), headers=headers)
+        if response.status_code == 201:
+        # Успешная регистрация сервера:
+                
+                logging.info('Успешная регистрация сервера и отправка данных')
+                print('Успешная регистрация сервера и отправка данных:')
+                return data
+        else:
+        # Неуспешная регистрация сервера:
+                logging.error('Отказ отправки данных')
+                print('Отказ отправки данных')
+    except(TypeError):
+        logging.error('Отказ регистрации сервера')
+        print('Отказ регистрации сервера')
 
-    response = requests.post('http://127.0.0.1:8000/api/servers/add', data=json.dumps(data), headers=headers)
-
-    return data
+    return
 
 
 if __name__ == '__main__':
     while True:
+#Старт программы:
+        logging.info('Старт программы')
+        print(f'Данные для отправки: {datainfo()}')
         dataresult = datainfo()
+#Полученный массив данных:
+        logging.info('Получен массив данных о системе')
         print(django(dataresult))
         time.sleep(t)
 
 
-
-
-
-# do UP/Down вместо True/False
-# проблема в списке с {}

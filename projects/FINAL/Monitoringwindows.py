@@ -11,8 +11,6 @@ import jsonpickle
 #Задержка
 t = 60
 
-#Установка параметров логирования
-
 logging.basicConfig(filename='log_file.log', format='%(asctime)s %(levelname)s %(message)s', datefmt='%b %d %H:%M:%S', level=logging.INFO)
 logging.basicConfig(filename='log_file.log', format='%(asctime)s %(levelname)s %(message)s', datefmt='%b %d %H:%M:%S', level=logging.ERROR)
 
@@ -26,15 +24,14 @@ def datainfo():
             return self.host_name
         
     class NETWORK:
-        @staticmethod
-        def get_stat(status: bool):
-            return "Up" if status else "Down"
+#        def get_status(status: bool):
+#            return "Up" if status else "Down"
 
         def show_stat(self):
             net_stat = psutil.net_if_stats()
             net = []
             for key, value in net_stat.items():
-                net.append({'interface': self.get_stat(value.isup)})
+                net.append({'interface': value.isup})
             out = net[0]
             return out
 
@@ -203,3 +200,7 @@ if __name__ == '__main__':
         time.sleep(t)
 
 
+
+
+
+# do UP/Down вместо True/False
