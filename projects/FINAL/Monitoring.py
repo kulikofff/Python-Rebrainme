@@ -55,7 +55,7 @@ def datainfo():
                     disk.append({'disk': partition.device})
             out = disk[0]
             return out
-
+        
         def show_mount_point(self):
             mountpoint = []
             for partition in self.partitions:
@@ -71,14 +71,18 @@ def datainfo():
             return out
 
         def show_total(self):
-            disk_usage = psutil.disk_usage('C:\\')
-            total = {'total': disk_usage.total}
-            return total
+            disk =  self.show_mount_point()
+            for value in disk.values():
+                disk_usage = psutil.disk_usage(value)
+                total = {'total': disk_usage.total}
+                return total
 
         def show_used(self):
-            disk_usage = psutil.disk_usage('C:\\')
-            used = {'used': disk_usage.used}
-            return used 
+            disk =  self.show_mount_point()
+            for value in disk.values():
+                disk_usage = psutil.disk_usage(value)
+                used = {'used': disk_usage.used}
+                return used 
 
     class MEMORY:
         memory: int = virtual_memory()
@@ -195,11 +199,18 @@ if __name__ == '__main__':
     while True:
 #Старт программы:
         logging.info('Старт программы')
-        print(f'Данные для отправки: {datainfo()}')
         dataresult = datainfo()
+        print(f'Данные для отправки: {dataresult}')
+        logging.info(f'Полученный в результате работы массив данных о системе: {dataresult}')
 #Полученный массив данных:
         logging.info('Получен массив данных о системе')
-        print(django(dataresult))
+#Обработка ошибки недоступности сервера:
+        try:
+            print(django(dataresult))
+        except(requests.exceptions.RequestException):
+            logging.error('Отказ регистрации сервера')
+            print(f'Запустите сервер Django и подождите не более {t} секунд')
+
         time.sleep(t)
 
 

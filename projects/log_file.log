@@ -1,0 +1,57 @@
+Jul 27 10:37:36 INFO The programme is started.
+Jul 27 10:37:36 INFO Getting information about external IP address...
+Jul 27 10:37:36 INFO Checking the existence of server in the list...
+Jul 27 10:37:40 ERROR DRW isn't accessible: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/servers/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D0A7C9E7D0>: Failed to establish a new connection: [WinError 10061] РџРѕРґРєР»СЋС‡РµРЅРёРµ РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅРѕ, С‚.Рє. РєРѕРЅРµС‡РЅС‹Р№ РєРѕРјРїСЊСЋС‚РµСЂ РѕС‚РІРµСЂРі Р·Р°РїСЂРѕСЃ РЅР° РїРѕРґРєР»СЋС‡РµРЅРёРµ'))
+Jul 27 10:37:40 INFO Host not in the list. Adding into it ...
+Jul 27 10:37:40 INFO Dumping data into the server {'address': 'localhost', 'port': 8000}
+Jul 27 10:37:44 ERROR Cannot dump data into the server {'address': 'localhost', 'port': 8000}: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/servers/add (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D0A7C9F970>: Failed to establish a new connection: [WinError 10061] РџРѕРґРєР»СЋС‡РµРЅРёРµ РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅРѕ, С‚.Рє. РєРѕРЅРµС‡РЅС‹Р№ РєРѕРјРїСЊСЋС‚РµСЂ РѕС‚РІРµСЂРі Р·Р°РїСЂРѕСЃ РЅР° РїРѕРґРєР»СЋС‡РµРЅРёРµ'))
+Jul 27 10:37:44 INFO Getting information about host ...
+Jul 27 10:37:44 INFO Getting information about average loading ...
+Jul 27 10:37:44 INFO Getting memory information ...
+Jul 27 10:37:44 INFO Getting information about network configuration ...
+Jul 27 10:37:44 INFO Getting disks information ...
+Jul 27 10:37:44 INFO Getting information about CPU ...
+Jul 27 10:37:44 INFO Dumping data into the server {'address': 'localhost', 'port': 8000}
+Jul 27 10:37:48 ERROR Cannot dump data into the server {'address': 'localhost', 'port': 8000}: HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /api/perfmon/add/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D0A7C9E0E0>: Failed to establish a new connection: [WinError 10061] РџРѕРґРєР»СЋС‡РµРЅРёРµ РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅРѕ, С‚.Рє. РєРѕРЅРµС‡РЅС‹Р№ РєРѕРјРїСЊСЋС‚РµСЂ РѕС‚РІРµСЂРі Р·Р°РїСЂРѕСЃ РЅР° РїРѕРґРєР»СЋС‡РµРЅРёРµ'))
+Jul 27 10:44:43 INFO Старт программы
+Jul 27 10:44:43 INFO Получен массив данных о системе
+Jul 27 10:45:24 INFO Старт программы
+Jul 27 10:45:24 INFO Получен массив данных о системе
+Jul 27 10:46:10 INFO Старт программы
+Jul 27 10:46:10 INFO Получен массив данных о системе
+Jul 27 10:47:12 INFO Старт программы
+Jul 27 10:47:12 INFO Получен массив данных о системе
+Jul 27 10:48:14 INFO Старт программы
+Jul 27 10:48:15 INFO Получен массив данных о системе
+Jul 27 10:49:17 INFO Старт программы
+Jul 27 10:49:17 INFO Получен массив данных о системе
+Jul 27 10:49:17 INFO Успешная регистрация сервера и отправка данных
+Jul 27 10:51:58 INFO Старт программы
+Jul 27 10:51:58 INFO Получен массив данных о системе
+Jul 27 10:53:00 INFO Старт программы
+Jul 27 10:53:00 INFO Получен массив данных о системе
+Jul 27 10:53:01 INFO Успешная регистрация сервера и отправка данных
+Jul 27 10:53:33 INFO Старт программы
+Jul 27 10:53:33 INFO Получен массив данных о системе
+Jul 27 10:54:29 INFO Старт программы
+Jul 27 10:54:29 INFO Получен массив данных о системе
+Jul 27 10:55:32 INFO Старт программы
+Jul 27 10:55:32 INFO Получен массив данных о системе
+Jul 27 10:55:32 INFO Успешная регистрация сервера и отправка данных
+Jul 27 10:56:32 INFO Старт программы
+Jul 27 10:56:32 INFO Получен массив данных о системе
+Jul 27 10:56:32 INFO Успешная регистрация сервера и отправка данных
+Jul 27 10:57:32 INFO Старт программы
+Jul 27 10:57:32 INFO Получен массив данных о системе
+Jul 27 10:57:33 INFO Успешная регистрация сервера и отправка данных
+Jul 27 12:42:26 INFO Старт программы
+Jul 27 12:42:26 INFO Получен массив данных о системе
+Jul 27 12:42:27 INFO Успешная регистрация сервера и отправка данных
+Jul 27 12:42:27 INFO {'name': 'fff', 'ip_address': '195.91.179.12', 'description': 'fff', 'server_is_active': True, 'data_active': '{"host_information": {"sysname": "admin", "hostname": "localhostAVK"}, "network": [{"interface": "Up", "mtu": 1500}], "disk": [{"disk": "C:\\\\", "mountpoint": "C:\\\\", "file_system_type": "NTFS", "total": 511450230784, "used": 433019133952}], "memory": {"memory_total": 16497446912, "memory_used": 6313938944, "memory_percent": 38.3}, "cpu": {"cpu_cores": 12, "cpu_physical_cores": 6, "cpu_freqency": {"py/set": [{"py/tuple": [3000.0, 0.0, 3000.0]}]}}, "load_average": [{"1 min": 0.0, "5 min": 0.0, "15 min": 0.0}]}'}
+Jul 27 12:43:08 INFO Старт программы
+Jul 27 12:43:08 INFO Получен массив данных о системе
+Jul 27 12:43:08 INFO Успешная регистрация сервера и отправка данных
+Jul 27 12:43:08 INFO {'name': 'fff', 'ip_address': '195.91.179.12', 'description': 'fff', 'server_is_active': True, 'data_active': '{"host_information": {"sysname": "admin", "hostname": "localhostAVK"}, "network": [{"interface": "Up", "mtu": 1500}], "disk": [{"disk": "C:\\\\", "mountpoint": "C:\\\\", "file_system_type": "NTFS", "total": 511450230784, "used": 433018810368}], "memory": {"memory_total": 16497446912, "memory_used": 6273318912, "memory_percent": 38.0}, "cpu": {"cpu_cores": 12, "cpu_physical_cores": 6, "cpu_freqency": {"py/set": [{"py/tuple": [3000.0, 0.0, 3000.0]}]}}, "load_average": [{"1 min": 0.0, "5 min": 0.0, "15 min": 0.0}]}'}
+Jul 27 12:44:01 INFO Старт программы
+Jul 27 12:44:02 INFO Получен массив данных о системе
+Jul 27 12:44:02 INFO Успешная регистрация сервера и отправка данных
