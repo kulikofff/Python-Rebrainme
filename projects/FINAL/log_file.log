@@ -1,52 +1,8 @@
-Jul 27 14:07:30 INFO Старт программы
-Jul 27 14:07:30 INFO Полученный в результате работы массив данных о системе: {'host_information': {'sysname': 'admin', 'hostname': 'localhostAVK'}, 'network': [{'interface': 'Up', 'mtu': 1500}], 'disk': [{'disk': 'C:\\', 'mountpoint': 'C:\\', 'file_system_type': 'NTFS', 'total': 511450230784, 'used': 433045594112}], 'memory': {'memory_total': 16497446912, 'memory_used': 7000027136, 'memory_percent': 42.4}, 'cpu': {'cpu_cores': 12, 'cpu_physical_cores': 6, 'cpu_freqency': {(3000.0, 0.0, 3000.0)}}, 'load_average': [{'1 min': 0.0, '5 min': 0.0, '15 min': 0.0}]}
-Jul 27 14:07:30 INFO Получен массив данных о системе
-Jul 27 14:07:30 INFO Успешная регистрация сервера и отправка данных
-Jul 27 14:08:30 INFO Старт программы
-Jul 27 14:08:31 INFO Полученный в результате работы массив данных о системе: {'host_information': {'sysname': 'admin', 'hostname': 'localhostAVK'}, 'network': [{'interface': 'Up', 'mtu': 1500}], 'disk': [{'disk': 'C:\\', 'mountpoint': 'C:\\', 'file_system_type': 'NTFS', 'total': 511450230784, 'used': 433045684224}], 'memory': {'memory_total': 16497446912, 'memory_used': 6995910656, 'memory_percent': 42.4}, 'cpu': {'cpu_cores': 12, 'cpu_physical_cores': 6, 'cpu_freqency': {(1400.0, 0.0, 3000.0)}}, 'load_average': [{'1 min': 0.0, '5 min': 0.0, '15 min': 0.0}]}
-Jul 27 14:08:31 INFO Получен массив данных о системе
-Jul 27 14:08:33 ERROR Отказ регистрации сервера
-Jul 27 14:09:33 INFO Старт программы
-Jul 27 14:09:33 INFO Полученный в результате работы массив данных о системе: {'host_information': {'sysname': 'admin', 'hostname': 'localhostAVK'}, 'network': [{'interface': 'Up', 'mtu': 1500}], 'disk': [{'disk': 'C:\\', 'mountpoint': 'C:\\', 'file_system_type': 'NTFS', 'total': 511450230784, 'used': 433045565440}], 'memory': {'memory_total': 16497446912, 'memory_used': 6993014784, 'memory_percent': 42.4}, 'cpu': {'cpu_cores': 12, 'cpu_physical_cores': 6, 'cpu_freqency': {(1400.0, 0.0, 3000.0)}}, 'load_average': [{'1 min': 0.0, '5 min': 0.0, '15 min': 0.0}]}
-Jul 27 14:09:33 INFO Получен массив данных о системе
-Jul 27 14:09:33 INFO Успешная регистрация сервера и отправка данных
-Jul 27 14:10:33 INFO Старт программы
-Jul 27 14:10:33 INFO Полученный в результате работы массив данных о системе: {'host_information': {'sysname': 'admin', 'hostname': 'localhostAVK'}, 'network': [{'interface': 'Up', 'mtu': 1500}], 'disk': [{'disk': 'C:\\', 'mountpoint': 'C:\\', 'file_system_type': 'NTFS', 'total': 511450230784, 'used': 433045565440}], 'memory': {'memory_total': 16497446912, 'memory_used': 6989631488, 'memory_percent': 42.4}, 'cpu': {'cpu_cores': 12, 'cpu_physical_cores': 6, 'cpu_freqency': {(1400.0, 0.0, 3000.0)}}, 'load_average': [{'1 min': 0.0, '5 min': 0.0, '15 min': 0.0}]}
-Jul 27 14:10:33 INFO Получен массив данных о системе
-Jul 27 14:10:33 INFO Успешная регистрация сервера и отправка данных
-Jul 27 14:11:33 INFO Старт программы
-Jul 27 14:11:33 INFO Полученный в результате работы массив данных о системе: {'host_information': {'sysname': 'admin', 'hostname': 'localhostAVK'}, 'network': [{'interface': 'Up', 'mtu': 1500}], 'disk': [{'disk': 'C:\\', 'mountpoint': 'C:\\', 'file_system_type': 'NTFS', 'total': 511450230784, 'used': 433046466560}], 'memory': {'memory_total': 16497446912, 'memory_used': 7032238080, 'memory_percent': 42.6}, 'cpu': {'cpu_cores': 12, 'cpu_physical_cores': 6, 'cpu_freqency': {(1400.0, 0.0, 3000.0)}}, 'load_average': [{'1 min': 0.0, '5 min': 0.0, '15 min': 0.0}]}
-Jul 27 14:11:33 INFO Получен массив данных о системе
-Jul 27 14:11:34 INFO Успешная регистрация сервера и отправка данных
-Jul 27 14:12:34 INFO Старт программы
-Jul 27 14:12:34 INFO Полученный в результате работы массив данных о системе: {'host_information': {'sysname': 'admin', 'hostname': 'localhostAVK'}, 'network': [{'interface': 'Up', 'mtu': 1500}], 'disk': [{'disk': 'C:\\', 'mountpoint': 'C:\\', 'file_system_type': 'NTFS', 'total': 511450230784, 'used': 433046392832}], 'memory': {'memory_total': 16497446912, 'memory_used': 6955053056, 'memory_percent': 42.2}, 'cpu': {'cpu_cores': 12, 'cpu_physical_cores': 6, 'cpu_freqency': {(1400.0, 0.0, 3000.0)}}, 'load_average': [{'1 min': 0.0, '5 min': 0.0, '15 min': 0.0}]}
-Jul 27 14:12:34 INFO Получен массив данных о системе
-Jul 27 14:12:34 INFO Успешная регистрация сервера и отправка данных
-Jul 27 14:13:34 INFO Старт программы
-Jul 27 14:13:34 INFO Полученный в результате работы массив данных о системе: {'host_information': {'sysname': 'admin', 'hostname': 'localhostAVK'}, 'network': [{'interface': 'Up', 'mtu': 1500}], 'disk': [{'disk': 'C:\\', 'mountpoint': 'C:\\', 'file_system_type': 'NTFS', 'total': 511450230784, 'used': 433046392832}], 'memory': {'memory_total': 16497446912, 'memory_used': 6919974912, 'memory_percent': 41.9}, 'cpu': {'cpu_cores': 12, 'cpu_physical_cores': 6, 'cpu_freqency': {(1400.0, 0.0, 3000.0)}}, 'load_average': [{'1 min': 0.0, '5 min': 0.0, '15 min': 0.0}]}
-Jul 27 14:13:34 INFO Получен массив данных о системе
-Jul 27 14:13:34 INFO Успешная регистрация сервера и отправка данных
-Jul 27 14:14:34 INFO Старт программы
-Jul 27 14:14:34 INFO Полученный в результате работы массив данных о системе: {'host_information': {'sysname': 'admin', 'hostname': 'localhostAVK'}, 'network': [{'interface': 'Up', 'mtu': 1500}], 'disk': [{'disk': 'C:\\', 'mountpoint': 'C:\\', 'file_system_type': 'NTFS', 'total': 511450230784, 'used': 433046392832}], 'memory': {'memory_total': 16497446912, 'memory_used': 6892425216, 'memory_percent': 41.8}, 'cpu': {'cpu_cores': 12, 'cpu_physical_cores': 6, 'cpu_freqency': {(1400.0, 0.0, 3000.0)}}, 'load_average': [{'1 min': 0.0, '5 min': 0.0, '15 min': 0.0}]}
-Jul 27 14:14:34 INFO Получен массив данных о системе
-Jul 27 14:14:35 INFO Успешная регистрация сервера и отправка данных
-Jul 27 14:15:35 INFO Старт программы
-Jul 27 14:15:35 INFO Полученный в результате работы массив данных о системе: {'host_information': {'sysname': 'admin', 'hostname': 'localhostAVK'}, 'network': [{'interface': 'Up', 'mtu': 1500}], 'disk': [{'disk': 'C:\\', 'mountpoint': 'C:\\', 'file_system_type': 'NTFS', 'total': 511450230784, 'used': 433046392832}], 'memory': {'memory_total': 16497446912, 'memory_used': 6886023168, 'memory_percent': 41.7}, 'cpu': {'cpu_cores': 12, 'cpu_physical_cores': 6, 'cpu_freqency': {(1400.0, 0.0, 3000.0)}}, 'load_average': [{'1 min': 0.0, '5 min': 0.0, '15 min': 0.0}]}
-Jul 27 14:15:35 INFO Получен массив данных о системе
-Jul 27 14:15:35 INFO Успешная регистрация сервера и отправка данных
-Jul 27 14:16:35 INFO Старт программы
-Jul 27 14:16:35 INFO Полученный в результате работы массив данных о системе: {'host_information': {'sysname': 'admin', 'hostname': 'localhostAVK'}, 'network': [{'interface': 'Up', 'mtu': 1500}], 'disk': [{'disk': 'C:\\', 'mountpoint': 'C:\\', 'file_system_type': 'NTFS', 'total': 511450230784, 'used': 433047212032}], 'memory': {'memory_total': 16497446912, 'memory_used': 7038214144, 'memory_percent': 42.7}, 'cpu': {'cpu_cores': 12, 'cpu_physical_cores': 6, 'cpu_freqency': {(1400.0, 0.0, 3000.0)}}, 'load_average': [{'1 min': 0.0, '5 min': 0.0, '15 min': 0.0}]}
-Jul 27 14:16:35 INFO Получен массив данных о системе
-Jul 27 14:16:35 INFO Успешная регистрация сервера и отправка данных
-Jul 27 15:38:41 INFO Старт программы
-Jul 27 15:38:42 INFO Полученный в результате работы массив данных о системе: {'host_information': {'sysname': 'admin', 'hostname': 'localhostAVK'}, 'network': [{'interface': 'Up', 'mtu': 1500}], 'disk': [{'disk': 'C:\\', 'mountpoint': 'C:\\', 'file_system_type': 'NTFS', 'total': 511450230784, 'used': 432935292928}], 'memory': {'memory_total': 16497446912, 'memory_used': 14045224960, 'memory_percent': 85.1}, 'cpu': {'cpu_cores': 12, 'cpu_physical_cores': 6, 'cpu_freqency': {(3000.0, 0.0, 3000.0)}}, 'load_average': [{'1 min': 0.0, '5 min': 0.0, '15 min': 0.0}]}
-Jul 27 15:38:42 INFO Получен массив данных о системе
-Jul 27 15:38:42 INFO Успешная регистрация сервера и отправка данных
-Jul 27 15:39:42 INFO Старт программы
-Jul 27 15:39:42 INFO Полученный в результате работы массив данных о системе: {'host_information': {'sysname': 'admin', 'hostname': 'localhostAVK'}, 'network': [{'interface': 'Up', 'mtu': 1500}], 'disk': [{'disk': 'C:\\', 'mountpoint': 'C:\\', 'file_system_type': 'NTFS', 'total': 511450230784, 'used': 432935280640}], 'memory': {'memory_total': 16497446912, 'memory_used': 5334839296, 'memory_percent': 32.3}, 'cpu': {'cpu_cores': 12, 'cpu_physical_cores': 6, 'cpu_freqency': {(3000.0, 0.0, 3000.0)}}, 'load_average': [{'1 min': 0.0, '5 min': 0.0, '15 min': 0.0}]}
-Jul 27 15:39:42 INFO Получен массив данных о системе
-Jul 27 15:39:45 ERROR Отказ регистрации сервера
-Jul 27 15:40:45 INFO Старт программы
-Jul 27 15:40:45 INFO Полученный в результате работы массив данных о системе: {'host_information': {'sysname': 'admin', 'hostname': 'localhostAVK'}, 'network': [{'interface': 'Up', 'mtu': 1500}], 'disk': [{'disk': 'C:\\', 'mountpoint': 'C:\\', 'file_system_type': 'NTFS', 'total': 511450230784, 'used': 432934883328}], 'memory': {'memory_total': 16497446912, 'memory_used': 7691264000, 'memory_percent': 46.6}, 'cpu': {'cpu_cores': 12, 'cpu_physical_cores': 6, 'cpu_freqency': {(1400.0, 0.0, 3000.0)}}, 'load_average': [{'1 min': 0.0, '5 min': 0.0, '15 min': 0.0}]}
-Jul 27 15:40:45 INFO Получен массив данных о системе
-Jul 27 15:40:45 INFO Успешная регистрация сервера и отправка данных
+Jul 27 17:04:20 INFO Старт программы
+Jul 27 17:04:21 INFO Полученный в результате работы массив данных о системе: {'host_information': {'sysname': 'admin', 'hostname': 'localhostAVK'}, 'network': [{'interface': 'Up', 'mtu': 1500}], 'disk': [{'disk': 'C:\\', 'mountpoint': 'C:\\', 'file_system_type': 'NTFS', 'total': 511450230784, 'used': 432938840064}], 'memory': {'memory_total': 16497446912, 'memory_used': 5609062400, 'memory_percent': 34.0}, 'cpu': {'cpu_cores': 12, 'cpu_physical_cores': 6, 'cpu_freqency': {(1400.0, 0.0, 3000.0)}}, 'load_average': [{'1 min': 0.0, '5 min': 0.0, '15 min': 0.0}]}
+Jul 27 17:04:21 INFO Получен массив данных о системе
+Jul 27 17:04:21 INFO Успешная регистрация сервера и отправка данных
+Jul 27 17:05:21 INFO Старт программы
+Jul 27 17:05:21 INFO Полученный в результате работы массив данных о системе: {'host_information': {'sysname': 'admin', 'hostname': 'localhostAVK'}, 'network': [{'interface': 'Up', 'mtu': 1500}], 'disk': [{'disk': 'C:\\', 'mountpoint': 'C:\\', 'file_system_type': 'NTFS', 'total': 511450230784, 'used': 432939384832}], 'memory': {'memory_total': 16497446912, 'memory_used': 5463523328, 'memory_percent': 33.1}, 'cpu': {'cpu_cores': 12, 'cpu_physical_cores': 6, 'cpu_freqency': {(1400.0, 0.0, 3000.0)}}, 'load_average': [{'1 min': 0.0, '5 min': 0.0, '15 min': 0.0}]}
+Jul 27 17:05:21 INFO Получен массив данных о системе
+Jul 27 17:05:23 ERROR Отказ регистрации сервера

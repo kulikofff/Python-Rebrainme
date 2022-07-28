@@ -16,6 +16,9 @@ t = 60
 logging.basicConfig(filename='log_file.log', format='%(asctime)s %(levelname)s %(message)s', datefmt='%b %d %H:%M:%S', level=logging.INFO)
 logging.basicConfig(filename='log_file.log', format='%(asctime)s %(levelname)s %(message)s', datefmt='%b %d %H:%M:%S', level=logging.ERROR)
 
+# Установка переменной окружения (ее нет в Windows и Ubuntu):
+os.environ['DESC'] = 'PC-AVK'
+
 def datainfo():  
     class HOSTINFO:
         sys_name: str = psutil.users()[0].name
@@ -141,27 +144,10 @@ def datainfo():
 
     return dict
 
-def fordjango_descr():
-    #"DESC" в windows нет.
-    try:
-        description = (os.environ["DESC"])
-    except(KeyError):
-        description = input(f"Вероятно, у Вас установлено Windows, введите описание вручную: ")
-    return description
-
-def fordjango_name():
-#"hostname" в windows нет.
-    try:
-        name = (os.environ["hostname"])
-    except(KeyError):
-        name = input(f"Вероятно, у Вас установлено Windows, введите имя сервера вручную: ")
-    return name
-
-description = fordjango_descr()
-name = fordjango_name()
-
 def django(dataresult):
+    name: str = psutil.users()[0].host if psutil.users()[0].host else 'localhostAVK'
     ipaddress = requests.get('https://ifconfig.me/ip').text
+    description = os.environ['DESC']
     status = True
 
 # Устранение ошибки "TypeError: Object of type set is not JSON serializable"
