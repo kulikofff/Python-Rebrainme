@@ -30,5 +30,15 @@ def action_function(message):
         decoded = tokenizer.decode(outputs[0], skip_special_tokens=True)
         bot.send_message(message.chat.id, decoded)
 
+#while True:
+#    bot.polling()
 
-bot.polling()
+
+if __name__=='__main__':
+    while True:
+        try:
+            bot.polling(non_stop=True, interval=0)
+        except Exception as e:
+            print(e)
+            time.sleep(5)
+            continue
