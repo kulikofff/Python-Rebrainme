@@ -11,7 +11,7 @@ mname = "facebook/wmt19-en-ru"
 tokenizer = FSMTTokenizer.from_pretrained(mname)
 model = FSMTForConditionalGeneration.from_pretrained(mname)
 
-token = 'Введите токен'
+token = 'Fill it'
 bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=['start'])
