@@ -2,6 +2,11 @@ import os
 import psutil #pip install psutil
 import telebot #pip install pyTelegramBotAPI
 
+#pip3 uninstall telebot
+#pip3 uninstall PyTelegramBotAPI
+#pip3 install pyTelegramBotAPI
+#pip3 install --upgrade pyTelegramBotAPI
+
 import os
 import psutil
 import time
